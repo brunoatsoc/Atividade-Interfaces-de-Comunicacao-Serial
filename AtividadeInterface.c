@@ -94,7 +94,6 @@ int main() {
 
     bool cor = true;
 
-    printf("Inicializado\n");
     show_number_leds(NUM_NUMBERS - 1); // Apaga a matriz de leds
 
     while (true) {
@@ -109,7 +108,7 @@ int main() {
                     continue;
                 }
 
-                printf("Letra recebida: %c\n", letter);
+                printf("Caractere recebido: %c\n", letter);
 
                 cor = !cor;
 
@@ -132,6 +131,8 @@ int main() {
                 button_a_pressed = false;
                 cor = !cor;
 
+                show_number_leds(NUM_NUMBERS - 1); // Apaga a matriz de leds
+
                 if(count_a % 2 != 0) { // Se o botão A for apertado acende o led
                     ssd1306_fill(&ssd, !cor);
                     ssd1306_rect(&ssd, 3, 3, 122, 58, cor, !cor);
@@ -139,6 +140,7 @@ int main() {
                     ssd1306_draw_string(&ssd, "aceso", 40, 40);
                     ssd1306_send_data(&ssd);
                     gpio_put(LED_PIN_GREEN, true);
+                    printf("Led verde aceso.\n");
                 } else { // Se o botão A foi apertado e o led já estava ligado ele sera desligado
                     ssd1306_fill(&ssd, !cor);
                     ssd1306_rect(&ssd, 3, 3, 122, 58, cor, !cor);
@@ -146,12 +148,15 @@ int main() {
                     ssd1306_draw_string(&ssd, "apagado", 40, 40);
                     ssd1306_send_data(&ssd);
                     gpio_put(LED_PIN_GREEN, false);
+                    printf("Led verde apagado.\n");
                 }
 
                 sleep_ms(1000);
             } else if(button_b_pressed) { // Verifica se o botão A foi apertado
                 button_b_pressed = false;
                 cor = !cor;
+
+                show_number_leds(NUM_NUMBERS - 1); // Apaga a matriz de leds
 
                 if(count_b % 2 != 0) { // Se o botão B for apertado acende o led
                     ssd1306_fill(&ssd, !cor);
@@ -160,6 +165,7 @@ int main() {
                     ssd1306_draw_string(&ssd, "aceso", 40, 40);
                     ssd1306_send_data(&ssd);
                     gpio_put(LED_PIN_BLUE, true);
+                    printf("Led azul aceso.\n");
                 } else { // Se o botão B foi apertado e o led já estava ligado ele sera desligado
                     ssd1306_fill(&ssd, !cor);
                     ssd1306_rect(&ssd, 3, 3, 122, 58, cor, !cor);
@@ -167,6 +173,7 @@ int main() {
                     ssd1306_draw_string(&ssd, "apagado", 40, 40);
                     ssd1306_send_data(&ssd);
                     gpio_put(LED_PIN_BLUE, false);
+                    printf("Led azul apagado.\n");
                 }
 
                 sleep_ms(1000);
