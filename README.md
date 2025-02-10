@@ -9,7 +9,7 @@ Este projeto implementa uma interface interativa para controlar LEDs RGB, uma ma
 ## Funcionalidades
 
 ### 1. Modificação da Biblioteca font.h
-- Foi realizada a adição de caracteres minúsculos à biblioteca `font.h`. Foram adicionados caracteres minusculos para serem exibidos no display SSD1306.
+- Foi realizada a adição de caracteres minúsculos à biblioteca `font.h`. Foram adicionadas as letras do alfabeto minusculo de a até a letra z para serem exibidos no display SSD1306.
 
 ### 2. Entrada de Caracteres via PC
 - Utiliza o Serial Monitor do VS Code para entrada de caracteres.
@@ -51,5 +51,5 @@ Para reproduzir este projeto, você precisará dos seguintes itens:
 
 ## Demonstração
 Acesse o link abaixo para assistir à apresentação do projeto no YouTube:
-[**Link para o Vídeo no YouTube**](https://youtube.com)
+[**Link para o Vídeo no YouTube**](https://youtu.be/QJzGCGVHuT8?si=PqeiAaRysM9KyQp_)
 
