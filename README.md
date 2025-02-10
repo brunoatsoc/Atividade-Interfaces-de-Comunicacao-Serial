@@ -51,5 +51,5 @@ Para reproduzir este projeto, você precisará dos seguintes itens:
 
 ## Demonstração
 Acesse o link abaixo para assistir à apresentação do projeto no YouTube:
-[**Link para o Vídeo no YouTube**](https://youtu.be/QJzGCGVHuT8?si=PqeiAaRysM9KyQp_)
+[**Link para o Vídeo no YouTube**](https://youtu.be/SQbnMIH-aqM?si=bUHncEANbB9BtUEQ)
 
